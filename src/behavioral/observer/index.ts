@@ -1,52 +1,20 @@
-//Точка входу для тесту)
+import { YouTubeChannel } from './YouTubeChannel';
+import { User } from './User';
 
-import { GenerationProcess } from './GenerationProcess';
-import { AdminDashboard } from './AdminDashboard';
+const myChannel = new YouTubeChannel();
 
-const process = new GenerationProcess();
-const adminPanel = new AdminDashboard();
+const vlad = new User("Влад");
+const petro = new User("Петро");
+const ivan = new User("Іван");
+const Andriy = new User("Андрій");
+myChannel.subscribe(vlad);
+myChannel.subscribe(petro);
+myChannel.subscribe(ivan);
+myChannel.subscribe(Andriy);
 
-// Підписка
-process.addObserver(adminPanel);
+myChannel.uploadVideo("Як вивчити Патерни за 5 хвилин");
 
-// Тест
-process.changeStatus("Генерація тестів розпочата.");
-process.changeStatus("Генерація завершена успішно!");
+console.log("\n--- Петро вирішив відписатися ---");
+myChannel.unsubscribe(petro);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-// 1. Імпортуємо класи з інших файлів
-// Зверни увагу: назви файлів мають збігатися з тими, що в папці
-import { GenerationProcess } from './GenerationProcess';
-import { AdminDashboard } from './AdminDashboard';
-import { EmailNotification } from './EmailNotification'; // Переконайся, що такий файл існує
-
-// 2. Створюємо змінні (назву 'process' змінили на 'proc', щоб не було помилки)
-const proc = new GenerationProcess();
-const adminPanel = new AdminDashboard();
-const emailService = new EmailNotification();
-
-// 3. Тестуємо логіку
-proc.addObserver(adminPanel);
-proc.addObserver(emailService);
-
-proc.changeStatus("Генерація тестів розпочата...");
-*/
+myChannel.uploadVideo("Git для новачків: виправляємо 403 помилку");

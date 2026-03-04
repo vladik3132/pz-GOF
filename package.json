@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+
+  },
+
+  "scripts": {
+  "start": "ts-node src/examples/run-all.ts",
+  "strategy": "ts-node src/behavioral/strategy/index.ts",
+  "index": "ts-node src/behavioral/strategy/index.ts",
+  "index": "ts-node src/behavioral/observer/index.ts",
+  "factory": "ts-node src/creational/singleton/LLMService.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+ 
+}
+
+
+}
