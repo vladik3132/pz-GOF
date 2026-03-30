@@ -12,6 +12,7 @@ export class ShippingCalculator {
     public setStrategy(strategy: ShippingStrategy): void {
         this.strategy = strategy;
     }
+    
 
     public calculate(weight: number, distance: number): number {
         return this.strategy.calculateCost(weight, distance);

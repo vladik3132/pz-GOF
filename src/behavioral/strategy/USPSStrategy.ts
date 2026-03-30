@@ -1,4 +1,4 @@
-//(Реалізація 3)
+
 
 import { ShippingStrategy } from './ShippingStrategy';
 

@@ -6,3 +6,10 @@ export class ShippingCalculatorAntiPattern {
         throw new Error("Невідома служба!");
     }
 }
+
+/*
+const antiCalc = new ShippingCalculatorAntiPattern();
+console.log("AntiPattern:", antiCalc.calculate('FedEx', 10, 100));
+console.log("AntiPattern:", antiCalc.calculate('UPS', 10, 100));
+console.log("AntiPattern:", antiCalc.calculate('USPS', 10, 100));
+*/
